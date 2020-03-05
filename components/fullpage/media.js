@@ -18,7 +18,8 @@ export const Home = withNavigationContext(({ fullpage }) => {
         main={
           <Typist className="hello">
             <h1>Hello, my name is Nguyen Kim Thanh</h1>
-            Use the button bellow to navigate to the next page
+            I’m a front-end developer with 2 years of experience in building web
+            application
           </Typist>
         }
         action={
@@ -38,121 +39,120 @@ export const Home = withNavigationContext(({ fullpage }) => {
   );
 });
 
-
 export const Two = withNavigationContext(({ fullpage }) => {
   return (
-    <Section wrapper={false} backgroundColor="#2a2a2a">
-      <Content
-        main={
-          <Page>
-            <Section backgroundColor="#2a2a2a">
-              <div>
-                <h1>PROJECT</h1>
-                <ul className="grid-list">
-                  <li className="item repo">
-                    <a className="screen" href="/detail/transcosmos-analytics">
-                      <div className="bar">
-                        <h2>TRANSCOSMOS ANALYTICS RECRUIT</h2>
-                        <i />
-                      </div>
-                      <div className="main">
-                        <div className="back">
-                          <img src="/static/analytic.png" />
+    <Page>
+      <Section wrapper={false} backgroundColor="#2a2a2a">
+        <Content
+          main={
+            <Page>
+              <Section backgroundColor="#2a2a2a">
+                <div>
+                  <h1>PROJECT</h1>
+                  <ul className="grid-list">
+                    <li className="item repo">
+                      <a className="screen" onClick={openDetail}>
+                        <div className="bar">
+                          <h2>TRANSCOSMOS ANALYTICS RECRUIT</h2>
+                          <i />
                         </div>
-                        <div className="tags">
-                          <div>
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>JQUERY</li>
-                              <li>ANIMATIONS</li>
-                              <li>TWEENMAX</li>
-                            </ul>
+                        <div className="main">
+                          <div className="back">
+                            <img src="/static/analytic.png" />
+                          </div>
+                          <div className="tags">
+                            <div>
+                              <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JQUERY</li>
+                                <li>ANIMATIONS</li>
+                                <li>TWEENMAX</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="imgs">
+                            <img src="/static/analytic_hover.png" />
                           </div>
                         </div>
-                        <div className="imgs"><img src="/static/analytic_hover.png" /></div>
-                      </div>
-                    </a>
-                  </li>
+                      </a>
+                    </li>
 
-                  <li className="item repo">
-                    <a className="screen">
-                      <div className="bar">
-                        <h2>JAPAN MEETING &amp; EVENT</h2>
-                        <i />
-                      </div>
-                      <div className="main">
-                        <div className="back">
-                          <img src="/static/japan.png" />
+                    <li className="item repo">
+                      <a className="screen">
+                        <div className="bar">
+                          <h2>JAPAN MEETING &amp; EVENT</h2>
+                          <i />
                         </div>
-                        <div className="tags">
-                          <div>
-                            <ul>
-                              <li>HTML5</li>
-                              <li>SCSS</li>
-                              <li>JQUERY</li>
-                              <li>BOOTSTRAP 4</li>
-                              <li>GULP</li>
-                            </ul>
+                        <div className="main">
+                          <div className="back">
+                            <img src="/static/japan.png" />
+                          </div>
+                          <div className="tags">
+                            <div>
+                              <ul>
+                                <li>HTML5</li>
+                                <li>SCSS</li>
+                                <li>JQUERY</li>
+                                <li>BOOTSTRAP 4</li>
+                                <li>GULP</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="imgs">
+                            <img src="/static/japan_hover.png" />
                           </div>
                         </div>
-                        <div className="imgs"><img src="/static/japan_hover.png" /></div>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="item repo">
-                    <a className="screen">
-                      <div className="bar">
-                        <h2>GAME MONSTER</h2>
-                        <i />
-                      </div>
-                      <div className="main">
-                        <div className="back">
-                          <img src="/static/monster.PNG" />
+                      </a>
+                    </li>
+                    <li className="item repo">
+                      <a className="screen">
+                        <div className="bar">
+                          <h2>GAME MONSTER</h2>
+                          <i />
                         </div>
-                        <div className="tags">
-                          <div>
-                            <ul>
-                              <li>HTML5</li>
-                              <li>CSS</li>
-                              <li>ANIMATIONS</li>
-                              <li>JAVASCRIPT</li>
-                              <li>CANVAS</li>
-                            </ul>
+                        <div className="main">
+                          <div className="back">
+                            <img src="/static/monster.PNG" />
+                          </div>
+                          <div className="tags">
+                            <div>
+                              <ul>
+                                <li>HTML5</li>
+                                <li>CSS</li>
+                                <li>ANIMATIONS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>CANVAS</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="imgs">
+                            <img src="/static/monster_hover.png" />
                           </div>
                         </div>
-                        <div className="imgs"><img src="/static/monster_hover.png" /></div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </Section>
-          </Page>
-        }
-        action={
-          <div className="button">
-            <AwesomeButton
-              size="large"
-              onPress={() => {
-                fullpage.navigate("/contact");
-              }}
-            >
-              Goto the next page
-            </AwesomeButton>
-          </div>
-        }
-      />
-
-    </Section>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </Section>
+            </Page>
+          }
+          action={
+            <div className="button">
+              <AwesomeButton
+                size="large"
+                onPress={() => {
+                  fullpage.navigate("/contact");
+                }}
+              >
+                Goto the next page
+              </AwesomeButton>
+            </div>
+          }
+        />
+      </Section>
+    </Page>
   );
-});
-export const Detail = withNavigationContext(({ fullpage }) => {
-  return <Page>
-    <Content main={
-      <div>Hello</div>
-    }></Content>
-  </Page>
 });
 
 export const Third = withNavigationContext(({ fullpage }) => {
@@ -189,13 +189,8 @@ export const media = [
   },
   {
     slug: "portfolio",
-    className: "slide portfolio",
+    className: "portfolio",
     children: <Two />
-  },
-  {
-    slug: "detail",
-    className: "detail",
-    children: <Detail />
   },
   {
     slug: "contact",
@@ -203,3 +198,7 @@ export const media = [
     children: <Third />
   }
 ];
+
+function openDetail() {
+  console.log(1);
+}
