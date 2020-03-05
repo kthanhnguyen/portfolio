@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/themes/theme-c137.css";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
@@ -26,7 +26,7 @@ export const Home = withNavigationContext(({ fullpage }) => {
             <AwesomeButton
               size="large"
               onPress={() => {
-                fullpage.navigate("/page-two");
+                fullpage.navigate("/portfolio");
               }}
             >
               Goto the next page
@@ -38,125 +38,168 @@ export const Home = withNavigationContext(({ fullpage }) => {
   );
 });
 
-// export const Third = withNavigationContext(({ fullpage }) => {
-//   return (
-//     <Section wrapper={false} backgroundColor="#ff6f5e">
-//       <Background src="https://caferati.me/images/series/bojack-0.png" />
-//       <Content
-//         main={
-//           <Lettering
-//             title="PAGE-THREE"
-//             text={["This is a screen with preloaded background image."]}
-//           />
-//         }
-//         action={
-//           <div className="button">
-//             <AwesomeButton
-//               size="large"
-//               onPress={() => {
-//                 fullpage.navigate("/page-two");
-//               }}
-//             >
-//               Goto the prev page
-//             </AwesomeButton>
-//           </div>
-//         }
-//       />
-//     </Section>
-//   );
-// });
+
+export const Two = withNavigationContext(({ fullpage }) => {
+  return (
+    <Section wrapper={false} backgroundColor="#2a2a2a">
+      <Content
+        main={
+          <Page>
+            <Section backgroundColor="#2a2a2a">
+              <div>
+                <h1>PROJECT</h1>
+                <ul className="grid-list">
+                  <li className="item repo">
+                    <a className="screen" href="/detail/transcosmos-analytics">
+                      <div className="bar">
+                        <h2>TRANSCOSMOS ANALYTICS RECRUIT</h2>
+                        <i />
+                      </div>
+                      <div className="main">
+                        <div className="back">
+                          <img src="/static/analytic.png" />
+                        </div>
+                        <div className="tags">
+                          <div>
+                            <ul>
+                              <li>HTML</li>
+                              <li>CSS</li>
+                              <li>JQUERY</li>
+                              <li>ANIMATIONS</li>
+                              <li>TWEENMAX</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="imgs"><img src="/static/analytic_hover.png" /></div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li className="item repo">
+                    <a className="screen">
+                      <div className="bar">
+                        <h2>JAPAN MEETING &amp; EVENT</h2>
+                        <i />
+                      </div>
+                      <div className="main">
+                        <div className="back">
+                          <img src="/static/japan.png" />
+                        </div>
+                        <div className="tags">
+                          <div>
+                            <ul>
+                              <li>HTML5</li>
+                              <li>SCSS</li>
+                              <li>JQUERY</li>
+                              <li>BOOTSTRAP 4</li>
+                              <li>GULP</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="imgs"><img src="/static/japan_hover.png" /></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li className="item repo">
+                    <a className="screen">
+                      <div className="bar">
+                        <h2>GAME MONSTER</h2>
+                        <i />
+                      </div>
+                      <div className="main">
+                        <div className="back">
+                          <img src="/static/monster.PNG" />
+                        </div>
+                        <div className="tags">
+                          <div>
+                            <ul>
+                              <li>HTML5</li>
+                              <li>CSS</li>
+                              <li>ANIMATIONS</li>
+                              <li>JAVASCRIPT</li>
+                              <li>CANVAS</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="imgs"><img src="/static/monster_hover.png" /></div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Section>
+          </Page>
+        }
+        action={
+          <div className="button">
+            <AwesomeButton
+              size="large"
+              onPress={() => {
+                fullpage.navigate("/contact");
+              }}
+            >
+              Goto the next page
+            </AwesomeButton>
+          </div>
+        }
+      />
+
+    </Section>
+  );
+});
+export const Detail = withNavigationContext(({ fullpage }) => {
+  return <Page>
+    <Content main={
+      <div>Hello</div>
+    }></Content>
+  </Page>
+});
+
+export const Third = withNavigationContext(({ fullpage }) => {
+  return (
+    <Section wrapper={false} backgroundColor="#4158b4">
+      <Content
+        main={
+          <div className="intro">
+            <h1>CONTACT</h1>
+          </div>
+        }
+        action={
+          <div className="button">
+            <AwesomeButton
+              size="large"
+              onPress={() => {
+                fullpage.navigate("/portfolio");
+              }}
+            >
+              Goto the prev page
+            </AwesomeButton>
+          </div>
+        }
+      />
+    </Section>
+  );
+});
 
 export const media = [
   {
     slug: "",
-    className: "slide page-one",
+    className: "slide about",
     children: <Home />
   },
   {
-    slug: "page-two",
-    className: "sectioned page-two",
-    children: (
-      <Page>
-        <Section wrapper={false} backgroundColor="#4158b4">
-          <Content
-            main={
-              <div className="intro">
-                <h1>INTRODUCTION</h1>
-                <div className="intro__item">
-                  <span>Fullname:</span>Nguyen Kim Thanh
-                </div>
-                <div className="intro__item">
-                  <span>Phone:</span>079-871-1321
-                </div>
-                <div className="intro__item">
-                  <span>Email:</span>nguyenkimthanh901@gmail.com
-                </div>
-                <div className="intro__item">
-                  <span>Address:</span>96/1/7, Phan Dinh Phung street, District
-                  Phu Nhuan, Ho Chi Minh city.
-                </div>
-                <div className="intro__item">
-                  <span>Date of Birth:</span>September 10th, 1996
-                </div>
-              </div>
-            }
-            action={<Mouse />}
-          />
-        </Section>
-        <Section backgroundColor="#617be3">
-          <div>
-            <h1>EDUCATION</h1>
-            <p>2014-2017: University of Science Ho Chi Minh city.</p>
-          </div>
-          <div>
-            <h1>EXPERIENCE</h1>
-            <p>12/2017- 2/2018: Intership FrontEnd at GMO-Z.com RUNSYSTEM</p>
-            <p>5/2018- 2020: Front End Developer at Transcosmos VietNam </p>
-          </div>
-        </Section>
-      </Page>
-    )
+    slug: "portfolio",
+    className: "slide portfolio",
+    children: <Two />
   },
   {
-    slug: "page-three",
-    preload: ["https://caferati.me/images/series/bojack-0.png"],
-    className: "slide page-three",
-    children: (
-      <Page>
-        <Section backgroundColor="#2a2a2a">
-          <div>
-            <h1>PROJECT</h1>
-            <ul className="grid-list">
-              <li className="item">
-                <a className="screen">
-                  <div className="bar">
-                    <h2>SKY GO Desktop </h2>
-                    <i />
-                  </div>
-                  <div className="main">
-                    <div className="back">
-                      <img src="/static/monster.PNG" />
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li className="item">
-                <a className="screen">
-                  <div className="bar">
-                    <h2>SKY GO Desktop </h2>
-                    <i />
-                  </div>
-                  <div className="main">
-                    <div className="back">
-                      <img src="/static/monster.PNG" />
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </Section>
-      </Page>
-    )
+    slug: "detail",
+    className: "detail",
+    children: <Detail />
+  },
+  {
+    slug: "contact",
+    className: "slide contact",
+    children: <Third />
   }
 ];

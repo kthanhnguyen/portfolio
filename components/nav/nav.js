@@ -14,19 +14,19 @@ const Nav = withNavigationContext(({ fullpage }) => {
       <div className="page-header__wrapper">
         <nav>
           <Link className={slug === "" ? "selected" : null} href="/">
-            index
+            About
           </Link>
           <Link
-            className={slug === "page-two" ? "selected" : null}
-            href="/page-two"
+            className={slug === "portfolio" ? "selected" : null}
+            href="/portfolio"
           >
-            page-two
+            Portfolio
           </Link>
           <Link
-            className={slug === "page-three" ? "selected" : null}
-            href="/page-three"
+            className={slug === "contact" ? "selected" : null}
+            href="/contact"
           >
-            page-three
+            Contact
           </Link>
         </nav>
       </div>
