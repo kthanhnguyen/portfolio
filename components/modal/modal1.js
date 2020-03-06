@@ -19,7 +19,11 @@ export class modal1 extends Component {
           Firebase.
         </h2>
         <div className="share">
-          <AwesomeButton size="large" href="https://google.com" target="_blank">
+          <AwesomeButton
+            size="large"
+            href="https://kthanhnguyen.github.io/portfolio/"
+            target="_blank"
+          >
             <svg
               className="i-svg"
               height="50"

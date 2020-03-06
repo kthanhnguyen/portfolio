@@ -2,16 +2,19 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kthanhnguyen.github.io/portfolio/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "gh-pages": "^2.2.0",
     "next": "9.1.7",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
