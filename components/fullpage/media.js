@@ -11,6 +11,17 @@ import Page from "../page/page";
 import "./fullpage.css";
 import Typist from "react-typist";
 
+
+import WithModal from "../modal/WithModal";
+import Modal1 from "../modal/modal1";
+import Modal2 from "../modal/modal2";
+import Modal3 from "../modal/modal3";
+import Modal4 from "../modal/modal4";
+import Modal5 from "../modal/modal5";
+
+
+
+
 export const Home = withNavigationContext(({ fullpage }) => {
   return (
     <Section wrapper={false} backgroundColor="#292c35">
@@ -39,19 +50,112 @@ export const Home = withNavigationContext(({ fullpage }) => {
   );
 });
 
+
+let Modal01 = WithModal(Modal1, 1);
+let Modal02 = WithModal(Modal2, 2);
+let Modal03 = WithModal(Modal3, 3);
+let Modal04 = WithModal(Modal4, 4);
+let Modal05 = WithModal(Modal5, 5);
+
+
+
 export const Two = withNavigationContext(({ fullpage }) => {
+
+  function openModal01() {
+    let modal = document.getElementById("modal1");
+    // modal.classList.add("show");
+    modal.className = 'modal active';
+  }
+  function openModal02() {
+    let modal = document.getElementById("modal2");
+    modal.className = 'modal active';
+  }
+  function openModal03() {
+    let modal = document.getElementById("modal3");
+    modal.className = 'modal active';
+  }
+  function openModal04() {
+    let modal = document.getElementById("modal4");
+    modal.className = 'modal active';
+  }
+  function openModal05() {
+    let modal = document.getElementById("modal5");
+    modal.className = 'modal active';
+  }
+
   return (
     <Page>
       <Section wrapper={false} backgroundColor="#2a2a2a">
         <Content
           main={
             <Page>
+              <div className="modal-block">
+                <Modal01 />
+                <Modal02 />
+                <Modal03 />
+                <Modal04 />
+                <Modal05 />
+              </div>
               <Section backgroundColor="#2a2a2a">
                 <div>
                   <h1>PROJECT</h1>
                   <ul className="grid-list">
                     <li className="item repo">
-                      <a className="screen" onClick={openDetail}>
+                      <a className="screen" onClick={openModal01}>
+                        <div className="bar">
+                          <h2>COURSES ONLINE</h2>
+                          <i />
+                        </div>
+                        <div className="main">
+                          <div className="back">
+                            <img src="/static/courses_online.png" />
+                          </div>
+                          <div className="tags">
+                            <div>
+                              <ul>
+                                <li>HTML</li>
+                                <li>SCSS</li>
+                                <li>REACT</li>
+                                <li>REDUX</li>
+                                <li>FIREBASE</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="imgs">
+                            <img src="/static/courses_online_hover.png" />
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li className="item repo">
+                      <a className="screen" onClick={openModal02}>
+                        <div className="bar">
+                          <h2>MY MOVIE</h2>
+                          <i />
+                        </div>
+                        <div className="main">
+                          <div className="back">
+                            <img src="/static/movie.png" />
+                          </div>
+                          <div className="tags">
+                            <div>
+                              <ul>
+                                <li>HTML</li>
+                                <li>SCSS</li>
+                                <li>ANGULAR 8</li>
+                                <li>BOOTSTRAP</li>
+                                <li>API</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="imgs">
+                            <img src="/static/movie_hover.png" />
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li className="item repo">
+                      <a className="screen" onClick={openModal03}>
                         <div className="bar">
                           <h2>TRANSCOSMOS ANALYTICS RECRUIT</h2>
                           <i />
@@ -79,7 +183,7 @@ export const Two = withNavigationContext(({ fullpage }) => {
                     </li>
 
                     <li className="item repo">
-                      <a className="screen">
+                      <a className="screen" onClick={openModal04}>
                         <div className="bar">
                           <h2>JAPAN MEETING &amp; EVENT</h2>
                           <i />
@@ -106,7 +210,7 @@ export const Two = withNavigationContext(({ fullpage }) => {
                       </a>
                     </li>
                     <li className="item repo">
-                      <a className="screen">
+                      <a className="screen" onClick={openModal05}>
                         <div className="bar">
                           <h2>GAME MONSTER</h2>
                           <i />
@@ -135,6 +239,7 @@ export const Two = withNavigationContext(({ fullpage }) => {
                   </ul>
                 </div>
               </Section>
+
             </Page>
           }
           action={
@@ -154,6 +259,9 @@ export const Two = withNavigationContext(({ fullpage }) => {
     </Page>
   );
 });
+
+
+
 
 export const Third = withNavigationContext(({ fullpage }) => {
   return (
@@ -181,6 +289,7 @@ export const Third = withNavigationContext(({ fullpage }) => {
   );
 });
 
+
 export const media = [
   {
     slug: "",
@@ -199,6 +308,3 @@ export const media = [
   }
 ];
 
-function openDetail() {
-  console.log(1);
-}
