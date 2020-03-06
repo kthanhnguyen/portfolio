@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/themes/theme-c137.css";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
-import Lettering from "../lettering/lettering";
-import Background from "../background/background";
 import Content from "../content/content";
-import Mouse from "../mouse/mouse";
 import Section from "../section/section";
 import Page from "../page/page";
 import "./fullpage.css";
 import Typist from "react-typist";
-
 
 import WithModal from "../modal/WithModal";
 import Modal1 from "../modal/modal1";
@@ -18,9 +14,6 @@ import Modal2 from "../modal/modal2";
 import Modal3 from "../modal/modal3";
 import Modal4 from "../modal/modal4";
 import Modal5 from "../modal/modal5";
-
-
-
 
 export const Home = withNavigationContext(({ fullpage }) => {
   return (
@@ -30,7 +23,7 @@ export const Home = withNavigationContext(({ fullpage }) => {
           <Typist className="hello">
             <h1>Hello, my name is Nguyen Kim Thanh</h1>
             I’m a front-end developer with 2 years of experience in building web
-            application
+            application.
           </Typist>
         }
         action={
@@ -50,37 +43,33 @@ export const Home = withNavigationContext(({ fullpage }) => {
   );
 });
 
-
 let Modal01 = WithModal(Modal1, 1);
 let Modal02 = WithModal(Modal2, 2);
 let Modal03 = WithModal(Modal3, 3);
 let Modal04 = WithModal(Modal4, 4);
 let Modal05 = WithModal(Modal5, 5);
 
-
-
 export const Two = withNavigationContext(({ fullpage }) => {
-
   function openModal01() {
     let modal = document.getElementById("modal1");
     // modal.classList.add("show");
-    modal.className = 'modal active';
+    modal.className = "modal active";
   }
   function openModal02() {
     let modal = document.getElementById("modal2");
-    modal.className = 'modal active';
+    modal.className = "modal active";
   }
   function openModal03() {
     let modal = document.getElementById("modal3");
-    modal.className = 'modal active';
+    modal.className = "modal active";
   }
   function openModal04() {
     let modal = document.getElementById("modal4");
-    modal.className = 'modal active';
+    modal.className = "modal active";
   }
   function openModal05() {
     let modal = document.getElementById("modal5");
-    modal.className = 'modal active';
+    modal.className = "modal active";
   }
 
   return (
@@ -98,7 +87,7 @@ export const Two = withNavigationContext(({ fullpage }) => {
               </div>
               <Section backgroundColor="#2a2a2a">
                 <div>
-                  <h1>PROJECT</h1>
+                  <h1>Web Developer Portfolio</h1>
                   <ul className="grid-list">
                     <li className="item repo">
                       <a className="screen" onClick={openModal01}>
@@ -239,7 +228,6 @@ export const Two = withNavigationContext(({ fullpage }) => {
                   </ul>
                 </div>
               </Section>
-
             </Page>
           }
           action={
@@ -259,9 +247,6 @@ export const Two = withNavigationContext(({ fullpage }) => {
     </Page>
   );
 });
-
-
-
 
 export const Third = withNavigationContext(({ fullpage }) => {
   return (
@@ -289,7 +274,6 @@ export const Third = withNavigationContext(({ fullpage }) => {
   );
 });
 
-
 export const media = [
   {
     slug: "",
@@ -307,4 +291,3 @@ export const media = [
     children: <Third />
   }
 ];
-
