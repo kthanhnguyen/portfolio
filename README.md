@@ -1,1 +1,1 @@
-Link: https://portfolio.nguyenkimthanh901.now.sh/portfolio
+Link: https://portfolio.nguyenkimthanh901.now.sh/
