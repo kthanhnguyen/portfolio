@@ -21,7 +21,7 @@ export class modal1 extends Component {
         <div className="share">
           <AwesomeButton
             size="large"
-            href="https://kthanhnguyen.github.io/portfolio/"
+            href="https://react-courseonline.web.app/"
             target="_blank"
           >
             <svg
